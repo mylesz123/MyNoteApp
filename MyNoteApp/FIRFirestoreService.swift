@@ -10,6 +10,9 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 
+/**
+ * CRUD operations class
+ */
 class FIRFirestoreService {
     
     private init() {}

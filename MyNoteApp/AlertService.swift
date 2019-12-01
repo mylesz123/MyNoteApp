@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ * Alert Service for creating and updating a user
+ */
 class AlertService {
     
     private init() {}

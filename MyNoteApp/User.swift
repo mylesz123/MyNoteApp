@@ -8,10 +8,12 @@
 
 import UIKit
 
+// require all conforming types to have an id string that can be read (“get”) or written (“set”)
 protocol Identifiable {
     var id: String? { get set }
 }
 
+// user model identifiable by id
 struct User: Codable, Identifiable {
     var id: String? = nil
     var name: String?

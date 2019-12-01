@@ -14,9 +14,9 @@ protocol Identifiable {
 
 struct User: Codable, Identifiable {
     var id: String? = nil
-    var name: String
+    var name: String?
     var priority: Int
-    var task: String
+    var task: String?
     
     init(name: String, priority: Int, task: String) {
         self.name = name

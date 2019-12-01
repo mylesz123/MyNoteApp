@@ -28,8 +28,6 @@ class AlertService {
         let add = UIAlertAction(title: "Add", style: .default) { _ in
             guard
                 let name = alert.textFields?.first?.text,
-                //let task = alert.textFields?[1].text,
-                //let priorityString = alert.textFields?.last?.text,
                 let priorityString = alert.textFields?[1].text,
                 let task = alert.textFields?.last?.text,
                 let priority = Int(priorityString)

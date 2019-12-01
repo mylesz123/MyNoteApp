@@ -20,8 +20,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Users" id="SeF-bg-SEr">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="DtM-1q-TxY">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DtM-1q-TxY">
+                            <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="onTap:" destination="JgT-8u-RP4" id="duz-AQ-cOb"/>
                             </connections>
@@ -37,10 +37,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZB4-Lz-arO" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="y8y-9h-qgL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="y8y-9h-qgL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.31459957360000002" green="0.1135121062" blue="0.4574908117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

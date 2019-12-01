@@ -46,7 +46,7 @@ class AlertService {
     }
     
     static func update(_ user: User, in vc: UIViewController, completion: @escaping (User) -> Void) {
-        let alert = UIAlertController(title: "Update \(user.name)", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Update \(String(describing: user.name))", message: nil, preferredStyle: .alert)
         alert.addTextField { (nameTF) in
             nameTF.placeholder = "Name"
         }

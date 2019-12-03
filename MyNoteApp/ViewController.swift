@@ -24,29 +24,31 @@ class ViewController: UITableViewController {
             self.tableView.reloadData()
         }
         
-        // sort Code, can't convert priority (int) to string 
-//        let databaseRef = Database.database().reference()
-//
-//        databaseRef.child("Name").queryOrderedByKey().observe(.childAdded, with: {
-//            snapshot in
-//
-//            var snapshotValue = snapshot.value as? NSDictionary
-//
-//            let name = snapshotValue!["name"] as? String
-//            snapshotValue = snapshot.value as? NSDictionary
-//
-//            let priority = snapshotValue!["priority"] as? String
-//            snapshotValue = snapshot.value as? NSDictionary
-//
-//            let task = snapshotValue!["task"] as? String
-//            snapshotValue = snapshot.value as? NSDictionary
-//
-//
-//            self.users.insert(User(name: name ?? "", priority: priority, task: task ?? "") , at: 0)
+        // sort Code, works 😏
+        let databaseRef = Database.database().reference()
+        print(databaseRef.child("users"))
+        databaseRef.child("users").queryOrdered(byChild: "name").observe(.value, with: {
+            snapshot in
+
+            var snapshotValue = snapshot.value as? NSDictionary
+
+            let name = snapshotValue?["name"] as? String
+            snapshotValue = snapshot.value as? NSDictionary
+
+            let priority = snapshotValue?["priority"] as? Int
+            snapshotValue = snapshot.value as? NSDictionary
+
+            let task = snapshotValue?["task"] as? String
+            snapshotValue = snapshot.value as? NSDictionary
+
+
+            self.users.insert(User(name: name ?? "", priority: priority ?? 0, task: task ?? "") , at: 0)
 //            self.users.sort(by: {$0.name! < $1.name!})
-//            self.tableView.reloadData()
-//        })
-        
+//            self.users.sort(by: {$0.priority > $1.priority})
+            self.users.sort(by: {$0.task! < $1.task!})
+
+            self.tableView.reloadData()
+        })
     }
 
     // on add (+) button click

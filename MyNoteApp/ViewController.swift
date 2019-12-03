@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class ViewController: UITableViewController {
     
@@ -21,6 +23,30 @@ class ViewController: UITableViewController {
             self.users = users
             self.tableView.reloadData()
         }
+        
+        // sort Code, can't convert priority (int) to string 
+//        let databaseRef = Database.database().reference()
+//
+//        databaseRef.child("Name").queryOrderedByKey().observe(.childAdded, with: {
+//            snapshot in
+//
+//            var snapshotValue = snapshot.value as? NSDictionary
+//
+//            let name = snapshotValue!["name"] as? String
+//            snapshotValue = snapshot.value as? NSDictionary
+//
+//            let priority = snapshotValue!["priority"] as? String
+//            snapshotValue = snapshot.value as? NSDictionary
+//
+//            let task = snapshotValue!["task"] as? String
+//            snapshotValue = snapshot.value as? NSDictionary
+//
+//
+//            self.users.insert(User(name: name ?? "", priority: priority, task: task ?? "") , at: 0)
+//            self.users.sort(by: {$0.name! < $1.name!})
+//            self.tableView.reloadData()
+//        })
+        
     }
 
     // on add (+) button click
@@ -29,6 +55,44 @@ class ViewController: UITableViewController {
             FIRFirestoreService.shared.create(for: user, in: .users)
         }
     }
+    
+    
+    @IBAction func onSettingsTap(_ sender: Any) {
+        let alert = UIAlertController(title: "",
+          message: "",
+          preferredStyle: .alert)
+        
+        // Change font of the title and message
+        let attributedTitle = NSMutableAttributedString(string: "Sort by category")
+        let attributedMessage = NSMutableAttributedString(string: "Select an option")
+        alert.setValue(attributedTitle, forKey: "attributedTitle")
+        alert.setValue(attributedMessage, forKey: "attributedMessage")
+        
+        let action1 = UIAlertAction(title: "Name", style: .default, handler: { (action) -> Void in
+            print("Name selected!")
+        })
+        
+        let action2 = UIAlertAction(title: "Priority", style: .default, handler: { (action) -> Void in
+               print("Priority selected!")
+        })
+        
+        let action3 = UIAlertAction(title: "Task", style: .default, handler: { (action) -> Void in
+               print("Task selected!")
+        })
+            
+           // Cancel button
+        let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
+           
+        // Add action buttons and present the Alert
+        alert.addAction(action1)
+        alert.addAction(action2)
+        alert.addAction(action3)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // populate tableview
         return users.count

@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Users-->
+        <!--Tasks-->
         <scene sceneID="L8W-3A-Nsx">
             <objects>
                 <tableViewController id="JgT-8u-RP4" customClass="ViewController" customModule="MyNoteApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,9 +18,23 @@
                             <outlet property="delegate" destination="JgT-8u-RP4" id="Fwd-5o-33j"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Users" id="SeF-bg-SEr">
+                    <navigationItem key="navigationItem" title="Tasks" id="SeF-bg-SEr">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Settings" image="pencil" catalog="system" id="e0h-gS-ZnH">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="onSettingsTap:" destination="JgT-8u-RP4" id="D8n-cJ-J3k"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Order" image="pencil.tip" catalog="system" id="Sgp-Ck-Kpk">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="onTap:" destination="JgT-8u-RP4" id="Z05-8F-wXc"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="DtM-1q-TxY">
-                            <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="onTap:" destination="JgT-8u-RP4" id="duz-AQ-cOb"/>
                             </connections>
@@ -39,7 +53,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="y8y-9h-qgL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -51,4 +65,8 @@
             <point key="canvasLocation" x="-252" y="186"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="64" height="56"/>
+        <image name="pencil.tip" catalog="system" width="48" height="64"/>
+    </resources>
 </document>

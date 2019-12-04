@@ -25,6 +25,7 @@
 		DE5874BC23942E4C00120FEA /* Snapshot Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5874BB23942E4C00120FEA /* Snapshot Extensions.swift */; };
 		DE5874BE2394318A00120FEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5874BD2394318A00120FEA /* Main.storyboard */; };
 		DE5874C02394349100120FEA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5874BF2394349100120FEA /* SceneDelegate.swift */; };
+		DEEC2D122397412800EAE7EF /* colorSwapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEC2D112397412800EAE7EF /* colorSwapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		DE5874BB23942E4C00120FEA /* Snapshot Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Snapshot Extensions.swift"; sourceTree = "<group>"; };
 		DE5874BD2394318A00120FEA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DE5874BF2394349100120FEA /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DEEC2D112397412800EAE7EF /* colorSwapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorSwapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				DE5874B723942DFB00120FEA /* FIRCollectionReference.swift */,
 				DE5874B923942E2600120FEA /* Encodable Extentions.swift */,
 				DE5874BB23942E4C00120FEA /* Snapshot Extensions.swift */,
+				DEEC2D112397412800EAE7EF /* colorSwapper.swift */,
 			);
 			path = MyNoteApp;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				DE5874B423942D2100120FEA /* User.swift in Sources */,
 				DE5874BA23942E2600120FEA /* Encodable Extentions.swift in Sources */,
 				DE58747E23932A6100120FEA /* AppDelegate.swift in Sources */,
+				DEEC2D122397412800EAE7EF /* colorSwapper.swift in Sources */,
 				DE5874B223942CF700120FEA /* AlertService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

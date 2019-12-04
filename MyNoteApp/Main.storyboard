@@ -26,17 +26,17 @@
                                     <action selector="onSettingsTap:" destination="JgT-8u-RP4" id="D8n-cJ-J3k"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Order" image="pencil.tip" catalog="system" id="Sgp-Ck-Kpk">
+                            <barButtonItem title="Order" image="arrow.swap" catalog="system" id="Sgp-Ck-Kpk">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <action selector="onTap:" destination="JgT-8u-RP4" id="Z05-8F-wXc"/>
+                                    <action selector="onSortButtonTap:" destination="JgT-8u-RP4" id="be0-7k-L6b"/>
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="DtM-1q-TxY">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="onTap:" destination="JgT-8u-RP4" id="duz-AQ-cOb"/>
+                                <action selector="onTaskTap:" destination="JgT-8u-RP4" id="duz-AQ-cOb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -66,7 +66,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.swap" catalog="system" width="64" height="50"/>
         <image name="pencil" catalog="system" width="64" height="56"/>
-        <image name="pencil.tip" catalog="system" width="48" height="64"/>
     </resources>
 </document>
